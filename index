@@ -1,0 +1,1253 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTESANAL - Business Plan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for beautiful handmade / craft style icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Elegant Display and Clean Sans-Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for rendering mathematical/scientific formulas as requested -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandLight: '#EDEDE9',
+                        brandCream: '#F5EBE0',
+                        brandDark: '#283618',
+                        brandAccent: '#606C38',
+                        brandOrange: '#DDA15E',
+                        brandWarmWhite: '#FEFAE0'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'artisan': '6px 6px 0px 0px #283618',
+                        'artisan-sm': '3px 3px 0px 0px #283618',
+                        'artisan-lg': '10px 10px 0px 0px #283618',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #EDEDE9;
+            color: #283618;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px #283618;
+        }
+        /* Custom scrollbar matching the color scheme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EDEDE9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283618;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #606C38;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brandDark selection:text-brandCream">
+
+    <!-- TOP HEADER / BANNER -->
+    <header class="border-b-2 border-brandDark bg-brandCream px-4 py-3 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Branding -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold text-lg shadow-artisan-sm">
+                    A
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-black tracking-wider uppercase block">Artesanal</span>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-brandAccent block">Shraer & Quiroga • 6SB</span>
+                </div>
+            </div>
+
+            <!-- Main Tabs -->
+            <nav class="flex flex-wrap justify-center gap-2">
+                <button onclick="switchTab('overview')" id="tab-overview" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandDark text-brandCream shadow-none transition-all duration-150">
+                    <i class="fa-solid fa-compass mr-1.5"></i>Overview
+                </button>
+                <button onclick="switchTab('products')" id="tab-products" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
+                    <i class="fa-solid fa-palette mr-1.5"></i>Products & Preview
+                </button>
+                <button onclick="switchTab('market')" id="tab-market" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
+                    <i class="fa-solid fa-chart-line mr-1.5"></i>Market & Strategy
+                </button>
+                <button onclick="switchTab('financial')" id="tab-financial" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
+                    <i class="fa-solid fa-calculator mr-1.5"></i>Financial Plan
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- INTRO HERO -->
+    <section class="bg-brandCream border-b-2 border-brandDark py-12 px-4 relative overflow-hidden pattern-dots">
+        <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-brandLight opacity-30 border-4 border-dashed border-brandDark"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="bg-brandOrange text-brandDark border-2 border-brandDark px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-artisan-sm inline-block mb-6">
+                Business Studies Project — 2026
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl font-black tracking-tight mb-4">
+                ARTESANAL
+            </h1>
+            <p class="font-serif italic text-lg md:text-2xl text-brandAccent max-w-2xl mx-auto mb-8">
+                "An authentic, deeply personalized, and curated collection of handmade treasures."
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto bg-brandWarmWhite p-6 rounded-2xl border-2 border-brandDark shadow-artisan">
+                <div class="text-left space-y-2 md:border-r border-brandDark/20 md:pr-4">
+                    <span class="text-xs uppercase font-bold text-brandAccent block">Created by</span>
+                    <p class="font-bold text-lg">Taiz Nahiara Shraer</p>
+                    <p class="font-bold text-lg">Alexia Quiroga</p>
+                </div>
+                <div class="text-left space-y-2 md:pl-4 pt-4 md:pt-0">
+                    <span class="text-xs uppercase font-bold text-brandAccent block">Course Details</span>
+                    <p class="font-semibold text-brandDark">Class: <strong class="font-bold">6SB</strong></p>
+                    <p class="font-semibold text-brandDark">Date: <strong class="font-bold">16/03/2026</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT container -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-12">
+        
+        <!-- ================= TAB: OVERVIEW ================= -->
+        <div id="content-overview" class="tab-content block space-y-12">
+            <!-- Business Concept & Description -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-7 bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="p-3 bg-brandLight rounded-lg border-2 border-brandDark text-brandDark">
+                                <i class="fa-solid fa-store text-xl"></i>
+                            </span>
+                            <h2 class="font-serif text-3xl font-bold">Description of the Business</h2>
+                        </div>
+                        <p class="leading-relaxed text-brandDark text-base md:text-lg space-y-4">
+                            The core philosophy of our business is to be truly <strong>Artesanal</strong>, offering highly personalized, custom pieces tailored perfectly to each client's unique tastes. Rather than settling for a single category, our project blends <strong>three different artisan crafts</strong>: crochet yarn pieces, custom-painted fine porcelain, and hand-embroidered accessories.
+                        </p>
+                        <p class="leading-relaxed text-brandDark text-base md:text-lg mt-4">
+                            Our objective is to launch in a lean format, spreading our brand awareness iteratively through highly aesthetic social media networks and customer word-of-mouth. 
+                        </p>
+                    </div>
+                    <div class="mt-8 bg-brandLight/50 p-4 rounded-xl border border-brandDark/30">
+                        <h4 class="font-bold text-sm uppercase tracking-wider text-brandAccent mb-1"><i class="fa-solid fa-shield-halved mr-2"></i>Risk Mitigation Strategy:</h4>
+                        <p class="text-sm">
+                            Launching three products introduces complexity, so we will monitor individual sales during the first three months. Any product that fails to gain traction will be strategically phased out to protect against material losses and ensure we focus purely on client demands.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Accent / Highlights -->
+                <div class="lg:col-span-5 flex flex-col gap-6">
+                    <div class="bg-brandCream p-6 rounded-2xl border-2 border-brandDark shadow-artisan flex-1">
+                        <h3 class="font-serif text-xl font-bold mb-4"><i class="fa-solid fa-heart mr-2 text-brandOrange"></i>Artisanal Brand Values</h3>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span class="text-brandAccent"><i class="fa-solid fa-circle-check"></i></span>
+                                <div>
+                                    <strong class="block font-bold">100% Handcrafted</strong>
+                                    <span class="text-sm text-brandDark/80">Every single stitch, paintstroke, and thread-pull is handmade with dedicated care.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-brandAccent"><i class="fa-solid fa-circle-check"></i></span>
+                                <div>
+                                    <strong class="block font-bold">Deep Personalization</strong>
+                                    <span class="text-sm text-brandDark/80">Customers participate in design selection, from floral borders to portraits of pets.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-brandAccent"><i class="fa-solid fa-circle-check"></i></span>
+                                <div>
+                                    <strong class="block font-bold">Visual Distinction</strong>
+                                    <span class="text-sm text-brandDark/80">Products include physical artistic signature markings, affirming their handcrafted prestige.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Core Operational Process -->
+                    <div class="bg-brandDark text-brandCream p-6 rounded-2xl border-2 border-brandDark shadow-artisan">
+                        <h3 class="font-serif text-xl font-bold text-brandWarmWhite mb-4"><i class="fa-solid fa-clock mr-2 text-brandOrange"></i>Turnaround & Delivery</h3>
+                        <p class="text-sm leading-relaxed mb-4">
+                            Crafting premium artisan goods requires time. To maintain unmatched high quality and avoid supply strain, we operate on a standard production buffer:
+                        </p>
+                        <div class="flex items-center gap-4 bg-brandAccent/30 p-3 rounded-lg border border-brandAccent">
+                            <i class="fa-solid fa-hourglass-half text-brandOrange text-2xl"></i>
+                            <div>
+                                <strong class="block text-sm text-brandWarmWhite">Standard Order Processing Time</strong>
+                                <span class="text-xs text-brandCream/80">Approximately 1 week (adjusted dynamically based on complexity)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organisation & Management Structure -->
+            <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b-2 border-brandDark pb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest font-bold text-brandAccent block mb-1">Human Resources & Operations</span>
+                        <h2 class="font-serif text-3xl font-bold">Organization & Management</h2>
+                    </div>
+                    <div class="bg-brandCream px-4 py-2 rounded-lg border-2 border-brandDark text-sm font-bold shadow-artisan-sm">
+                        Structure Status: <span class="text-brandAccent">Lean & Growth-Oriented</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="border-2 border-brandDark p-5 rounded-xl bg-brandLight/50">
+                        <div class="text-brandAccent text-2xl mb-2"><i class="fa-solid fa-globe"></i></div>
+                        <h4 class="font-bold mb-2">Omnichannel Reception</h4>
+                        <p class="text-sm text-brandDark/80">
+                            Centralized orders coming in through visual platforms, direct WhatsApp business communication, and customized forms.
+                        </p>
+                    </div>
+                    <div class="border-2 border-brandDark p-5 rounded-xl bg-brandLight/50">
+                        <div class="text-brandAccent text-2xl mb-2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h4 class="font-bold mb-2">Interactive Preview</h4>
+                        <p class="text-sm text-brandDark/80">
+                            Our proprietary web interface shows previews of floral configurations, color patterns, and custom layouts before finalizing orders.
+                        </p>
+                    </div>
+                    <div class="border-2 border-brandDark p-5 rounded-xl bg-brandLight/50">
+                        <div class="text-brandAccent text-2xl mb-2"><i class="fa-solid fa-users-gear"></i></div>
+                        <h4 class="font-bold mb-2">Aesthetic Talent Search</h4>
+                        <p class="text-sm text-brandDark/80">
+                            Future hires will undergo rigorous assessment based on creative art skill sets, high patience thresholds, and excellent customer service.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Custom Equations/Formulas as requested -->
+                <div class="p-6 bg-brandCream rounded-xl border border-brandDark/30 text-center">
+                    <h4 class="font-bold uppercase tracking-wider text-sm mb-4">The Logic of Quality & Scale</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <div class="bg-brandWarmWhite p-4 rounded-lg border border-brandDark/20">
+                            <span class="text-xs font-bold text-brandAccent uppercase block mb-1">Efficiency Formula</span>
+                            <div class="my-2 font-serif text-lg font-semibold overflow-x-auto text-center">
+                                $$\text{Efficiency} \implies \text{Faster Production} \implies \text{More Orders} \implies \text{Higher Output (\text{Bs})}$$
+                            </div>
+                        </div>
+                        <div class="bg-brandWarmWhite p-4 rounded-lg border border-brandDark/20">
+                            <span class="text-xs font-bold text-brandAccent uppercase block mb-1">Growth Mechanics</span>
+                            <div class="my-2 font-serif text-lg font-semibold overflow-x-auto text-center">
+                                $$\text{Premium Quality} \implies \text{Happy Customer} \implies \text{Word-Of-Mouth} \implies \text{Accelerated Sales}$$
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: PRODUCTS & PREVIEW ================= -->
+        <div id="content-products" class="tab-content hidden space-y-12">
+            
+            <!-- Products Showcase Section with High-quality CSS SVGs -->
+            <div>
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase font-black text-brandAccent tracking-widest block mb-1">HANDMADE SELECTIONS</span>
+                    <h2 class="font-serif text-4xl font-extrabold">The Core Product Categories</h2>
+                    <p class="text-brandDark/70 max-w-2xl mx-auto mt-2">
+                        Three distinct creative pillars crafted to be combined or enjoyed on their own as customized, exquisite gifts.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Category 1: Crochet -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
+                        <div>
+                            <!-- Custom CSS-SVG Art for Crochet -->
+                            <div class="w-full h-48 bg-brandCream rounded-xl border border-brandDark/20 mb-6 flex items-center justify-center relative overflow-hidden">
+                                <!-- Vector Crochet Art -->
+                                <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="65" r="32" fill="#DDA15E" fill-opacity="0.3" stroke="#283618" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <!-- Amigurumi Character Mouse -->
+                                    <circle cx="60" cy="65" r="26" fill="#F5EBE0" stroke="#283618" stroke-width="2.5" />
+                                    <!-- Ears -->
+                                    <circle cx="38" cy="46" r="10" fill="#F5EBE0" stroke="#283618" stroke-width="2.5" />
+                                    <circle cx="38" cy="46" r="6" fill="#E8A598" />
+                                    <circle cx="82" cy="46" r="10" fill="#F5EBE0" stroke="#283618" stroke-width="2.5" />
+                                    <circle cx="82" cy="46" r="6" fill="#E8A598" />
+                                    <!-- Eyes -->
+                                    <circle cx="49" cy="62" r="3" fill="#283618" />
+                                    <circle cx="71" cy="62" r="3" fill="#283618" />
+                                    <circle cx="48" cy="61" r="1" fill="#FFF" />
+                                    <circle cx="70" cy="61" r="1" fill="#FFF" />
+                                    <!-- Nose/Muzzle -->
+                                    <ellipse cx="60" cy="68" rx="4" ry="3" fill="#E8A598" stroke="#283618" stroke-width="1.5"/>
+                                    <!-- Cheeks -->
+                                    <ellipse cx="45" cy="68" rx="3" ry="1.5" fill="#E5989B" opacity="0.6"/>
+                                    <ellipse cx="75" cy="68" rx="3" ry="1.5" fill="#E5989B" opacity="0.6"/>
+                                    <!-- Needle -->
+                                    <path d="M25 95 L95 25" stroke="#283618" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="28" cy="92" r="2" fill="#EDEDE9"/>
+                                </svg>
+                                <span class="absolute top-3 right-3 bg-brandDark text-brandCream text-[10px] font-bold px-2 py-1 rounded">Yarn Craft</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Crochet Masterpieces</h3>
+                            <p class="text-sm text-brandDark/85 leading-relaxed mb-4">
+                                Hand-crocheted items using premium, durable yarn and specialized needles. This charming collection features personalized details.
+                            </p>
+                            <ul class="text-xs text-brandAccent font-bold space-y-1 bg-brandLight/40 p-3 rounded-lg border border-brandDark/10">
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Cute Character Amigurumis</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Custom-themed Keychains</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Aesthetic Bookmarks & Coasters</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brandDark/10 flex justify-between items-center">
+                            <span class="text-xs uppercase font-bold text-brandDark/60">Starting at</span>
+                            <span class="font-serif text-lg font-black text-brandDark">100 Bs.</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Painted Porcelain -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
+                        <div>
+                            <!-- Custom CSS-SVG Art for Porcelain -->
+                            <div class="w-full h-48 bg-brandCream rounded-xl border border-brandDark/20 mb-6 flex items-center justify-center relative overflow-hidden">
+                                <!-- Vector Porcelain Dishes -->
+                                <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Heart dish base -->
+                                    <path d="M60 90 C30 75 18 50 35 34 C48 22 60 40 60 40 C60 40 72 22 85 34 C102 50 90 75 60 90 Z" fill="#FEFAE0" stroke="#283618" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Hand painted evil eye pattern in center -->
+                                    <circle cx="60" cy="55" r="12" fill="#FFF" stroke="#283618" stroke-width="1.5" />
+                                    <circle cx="60" cy="55" r="7" fill="#3A86C8" />
+                                    <circle cx="60" cy="55" r="3" fill="#283618" />
+                                    <!-- Eyelashes -->
+                                    <path d="M60 41 L60 38" stroke="#283618" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M52 43 L49 40" stroke="#283618" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M68 43 L71 40" stroke="#283618" stroke-width="1.5" stroke-linecap="round"/>
+                                    <!-- Gold heart details -->
+                                    <path d="M45 70 C42 68 40 70 42 72 L45 75 L48 72 C50 70 48 68 45 70 Z" fill="#DDA15E"/>
+                                    <path d="M75 70 C72 68 70 70 72 72 L75 75 L78 72 C80 70 78 68 75 70 Z" fill="#DDA15E"/>
+                                </svg>
+                                <span class="absolute top-3 right-3 bg-brandDark text-brandCream text-[10px] font-bold px-2 py-1 rounded">Porcelain Art</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Painted Porcelain</h3>
+                            <p class="text-sm text-brandDark/85 leading-relaxed mb-4">
+                                Heavily detailed, painted elegant ceramic and porcelain pieces. Painted thoroughly by hand to preserve complex details.
+                            </p>
+                            <ul class="text-xs text-brandAccent font-bold space-y-1 bg-brandLight/40 p-3 rounded-lg border border-brandDark/10">
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Customized Pet Portraits</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Delicate Botanical Cups</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Heart Jewelry & Key Holders</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brandDark/10 flex justify-between items-center">
+                            <span class="text-xs uppercase font-bold text-brandDark/60">Starting at</span>
+                            <span class="font-serif text-lg font-black text-brandDark">200 Bs.</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Embroidery -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
+                        <div>
+                            <!-- Custom CSS-SVG Art for Embroidery -->
+                            <div class="w-full h-48 bg-brandCream rounded-xl border border-brandDark/20 mb-6 flex items-center justify-center relative overflow-hidden">
+                                <!-- Vector Embroidery Art -->
+                                <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Canvas tote bag piece -->
+                                    <path d="M30 40 L90 40 L85 100 L35 100 Z" fill="#EAE0D5" stroke="#283618" stroke-width="2.5"/>
+                                    <!-- Handles -->
+                                    <path d="M45 40 C45 20 52 15 60 15 C68 15 75 20 75 40" stroke="#283618" stroke-width="2.5" fill="none"/>
+                                    <!-- Lavender stems & flower embroidery -->
+                                    <path d="M60 85 C58 75 54 62 55 50" stroke="#606C38" stroke-width="2" stroke-linecap="round" fill="none"/>
+                                    <path d="M63 86 C64 78 68 65 65 52" stroke="#606C38" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                    <!-- Little flowers on lavender -->
+                                    <circle cx="53" cy="55" r="3" fill="#9B5DE5" />
+                                    <circle cx="56" cy="50" r="3" fill="#8338EC" />
+                                    <circle cx="51" cy="47" r="2.5" fill="#9B5DE5" />
+                                    <circle cx="67" cy="58" r="3" fill="#9B5DE5" />
+                                    <circle cx="64" cy="52" r="3" fill="#8338EC" />
+                                    <circle cx="66" cy="48" r="2.5" fill="#9B5DE5" />
+                                    <!-- Ribbon tie -->
+                                    <path d="M54 75 C56 73 63 73 65 75" stroke="#E63946" stroke-width="1.5" fill="none"/>
+                                    <circle cx="59" cy="75" r="2" fill="#E63946" />
+                                </svg>
+                                <span class="absolute top-3 right-3 bg-brandDark text-brandCream text-[10px] font-bold px-2 py-1 rounded">Embroidery</span>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold mb-2">Embroidered Pieces</h3>
+                            <p class="text-sm text-brandDark/85 leading-relaxed mb-4">
+                                Delicate, precise decorative embroidery stitched onto durable shirts, linen tote bags, and personalized clothing.
+                            </p>
+                            <ul class="text-xs text-brandAccent font-bold space-y-1 bg-brandLight/40 p-3 rounded-lg border border-brandDark/10">
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Custom Aesthetic Canvas Tote Bags</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Monogrammed Outline T-Shirts</li>
+                                <li><i class="fa-solid fa-chevron-right mr-1.5 text-brandOrange"></i> Tiny Floral Accents & Borders</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-brandDark/10 flex justify-between items-center">
+                            <span class="text-xs uppercase font-bold text-brandDark/60">Starting at</span>
+                            <span class="font-serif text-lg font-black text-brandDark">150 Bs.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Personalization Previewer -->
+            <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <span class="text-xs uppercase tracking-widest font-bold text-brandAccent bg-brandCream px-3 py-1 rounded-full border border-brandDark/25 inline-block mb-2">Live Experience Portal</span>
+                    <h3 class="font-serif text-3xl font-bold">Interactive Artisan Customizer</h3>
+                    <p class="text-sm text-brandDark/80 mt-1">
+                        Select a base product, customize the hand-painted pattern or embroidery, and preview what your signature handmade creation would look like!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Control Options (Left Panel) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Step 1: Base Product selection -->
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-brandAccent mb-2">1. Select Base Canvas</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="selectPreviewBase('dish')" id="btn-base-dish" class="preview-base-btn py-3 px-2 rounded-xl border-2 border-brandDark text-xs font-bold text-center bg-brandDark text-brandCream transition-all">
+                                    <i class="fa-solid fa-heart block text-base mb-1"></i> Ceramic Dish
+                                </button>
+                                <button onclick="selectPreviewBase('tote')" id="btn-base-tote" class="preview-base-btn py-3 px-2 rounded-xl border-2 border-brandDark text-xs font-bold text-center bg-brandCream hover:bg-brandLight transition-all">
+                                    <i class="fa-solid fa-bag-shopping block text-base mb-1"></i> Tote Bag
+                                </button>
+                                <button onclick="selectPreviewBase('shirt')" id="btn-base-shirt" class="preview-base-btn py-3 px-2 rounded-xl border-2 border-brandDark text-xs font-bold text-center bg-brandCream hover:bg-brandLight transition-all">
+                                    <i class="fa-solid fa-shirt block text-base mb-1"></i> Shirt
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Pattern / Art Style -->
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-brandAccent mb-2">2. Painted / Embroidered Motif</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="selectPreviewMotif('flower')" id="btn-motif-flower" class="preview-motif-btn py-2.5 px-3 rounded-xl border-2 border-brandDark text-xs font-bold bg-brandDark text-brandCream text-left flex items-center gap-2 transition-all">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span> Lavender Bouquet
+                                </button>
+                                <button onclick="selectPreviewMotif('fruit')" id="btn-motif-fruit" class="preview-motif-btn py-2.5 px-3 rounded-xl border-2 border-brandDark text-xs font-bold bg-brandCream text-left flex items-center gap-2 transition-all">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-orange-400"></span> Sweet Cherries
+                                </button>
+                                <button onclick="selectPreviewMotif('eye')" id="btn-motif-eye" class="preview-motif-btn py-2.5 px-3 rounded-xl border-2 border-brandDark text-xs font-bold bg-brandCream text-left flex items-center gap-2 transition-all">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Mystic Evil Eye
+                                </button>
+                                <button onclick="selectPreviewMotif('custom')" id="btn-motif-custom" class="preview-motif-btn py-2.5 px-3 rounded-xl border-2 border-brandDark text-xs font-bold bg-brandCream text-left flex items-center gap-2 transition-all">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-600 animate-pulse"></span> Custom Text
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Text Customization (Shown if custom selected) -->
+                        <div id="custom-text-input-container" class="hidden">
+                            <label class="block text-xs uppercase font-bold text-brandAccent mb-1">3. Enter Custom Text (Embroidery/Paint)</label>
+                            <input type="text" id="custom-text-field" oninput="updateCustomTextPreview()" value="Artesanal" maxlength="12" class="w-full border-2 border-brandDark px-4 py-2 rounded-xl bg-brandCream font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent text-sm">
+                            <span class="text-[10px] text-brandAccent block mt-1">This will be meticulously sewn or painted by hand onto your item.</span>
+                        </div>
+
+                        <!-- Submit simulation -->
+                        <div class="bg-brandCream p-4 rounded-xl border border-brandDark/30">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold text-brandAccent">Estimated Cost:</span>
+                                <span id="customizer-price-tag" class="font-serif font-black text-lg">200 Bs</span>
+                            </div>
+                            <button onclick="simulateOrderSubmit()" class="w-full bg-brandDark text-brandCream border-2 border-brandDark font-bold py-3 rounded-xl shadow-artisan-sm hover:translate-y-0.5 active:translate-y-1 transition-all text-xs uppercase tracking-widest">
+                                <i class="fa-brands fa-whatsapp mr-2"></i> Submit Design Idea to WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Rendering Canvas Viewport (Right Panel) -->
+                    <div class="lg:col-span-7 flex flex-col items-center">
+                        <div class="w-full max-w-sm h-80 bg-brandCream rounded-3xl border-2 border-brandDark shadow-artisan flex items-center justify-center p-8 relative overflow-hidden">
+                            <!-- Canvas Mockup Renderer -->
+                            <div id="mockup-viewport" class="relative w-full h-full flex items-center justify-center transition-all duration-300">
+                                
+                                <!-- Core Canvas Base Shapes (Controlled via JS) -->
+                                <!-- 1. Heart Ceramic Dish -->
+                                <div id="mockup-base-dish" class="absolute inset-0 flex items-center justify-center">
+                                    <svg class="w-48 h-48 drop-shadow-lg" viewBox="0 0 100 100" fill="none">
+                                        <path d="M50 82 C25 68 12 45 28 29 C40 18 50 34 50 34 C50 34 60 18 72 29 C88 45 75 68 50 82 Z" fill="#FEFAE0" stroke="#283618" stroke-width="2.5"/>
+                                    </svg>
+                                </div>
+
+                                <!-- 2. Canvas Tote Bag -->
+                                <div id="mockup-base-tote" class="absolute inset-0 flex items-center justify-center hidden">
+                                    <svg class="w-48 h-48 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                                        <!-- Handles -->
+                                        <path d="M38 32 C38 12 44 8 50 8 C56 8 62 12 62 32" stroke="#283618" stroke-width="2.5" fill="none"/>
+                                        <!-- Bag fabric body -->
+                                        <path d="M25 32 L75 32 L70 92 L30 92 Z" fill="#EAE0D5" stroke="#283618" stroke-width="2.5"/>
+                                        <!-- Fabric weave texture effect -->
+                                        <path d="M32 35 L68 35" stroke="#283618" stroke-width="0.5" stroke-dasharray="2 2"/>
+                                    </svg>
+                                </div>
+
+                                <!-- 3. Cotton Shirt -->
+                                <div id="mockup-base-shirt" class="absolute inset-0 flex items-center justify-center hidden">
+                                    <svg class="w-48 h-48 drop-shadow-md" viewBox="0 0 100 100" fill="none">
+                                        <path d="M15 28 L30 18 L40 24 L50 18 L60 24 L70 18 L85 28 L78 44 L70 42 L70 90 L30 90 L30 42 L22 44 Z" fill="#F8F9FA" stroke="#283618" stroke-width="2.5"/>
+                                    </svg>
+                                </div>
+
+                                <!-- LAYERED ART PATTERNS (Positioned precisely over the bases) -->
+                                <div id="art-layer-container" class="absolute inset-0 flex items-center justify-center pointer-events-none" style="transform: scale(0.9) translateY(4px);">
+                                    
+                                    <!-- A. Flower Bouquet Motif -->
+                                    <div id="motif-layer-flower" class="absolute inset-0 flex items-center justify-center">
+                                        <svg class="w-32 h-32" viewBox="0 0 100 100" fill="none">
+                                            <!-- Lavender/Wildflower stems and bouquet ribbons -->
+                                            <path d="M47 68 C44 54 42 42 46 30" stroke="#606C38" stroke-width="1.8" stroke-linecap="round"/>
+                                            <path d="M50 70 C50 56 54 44 51 32" stroke="#606C38" stroke-width="1.8" stroke-linecap="round"/>
+                                            <path d="M53 69 C56 55 60 40 56 28" stroke="#606C38" stroke-width="1.5" stroke-linecap="round"/>
+                                            <!-- Blooms -->
+                                            <circle cx="44" cy="38" r="2.5" fill="#C77DFF" />
+                                            <circle cx="47" cy="33" r="3" fill="#9D4EDD" />
+                                            <circle cx="43" cy="30" r="2" fill="#7B2CBF" />
+                                            <circle cx="53" cy="40" r="2.5" fill="#C77DFF" />
+                                            <circle cx="50" cy="35" r="3" fill="#9D4EDD" />
+                                            <circle cx="52" cy="28" r="2" fill="#7B2CBF" />
+                                            <circle cx="57" cy="36" r="2.5" fill="#C77DFF" />
+                                            <circle cx="55" cy="31" r="3" fill="#9D4EDD" />
+                                            <circle cx="58" cy="26" r="2" fill="#7B2CBF" />
+                                            <!-- Tied Ribbon Bow -->
+                                            <path d="M48 60 C42 58 45 54 48 57 C51 60 51 60 48 60 Z" fill="#E63946" stroke="#283618" stroke-width="1"/>
+                                            <path d="M52 60 C58 58 55 54 52 57 C49 60 49 60 52 60 Z" fill="#E63946" stroke="#283618" stroke-width="1"/>
+                                            <path d="M46 64 L54 64" stroke="#E63946" stroke-width="1.5"/>
+                                        </svg>
+                                    </div>
+
+                                    <!-- B. Sweet Cherries Motif -->
+                                    <div id="motif-layer-fruit" class="absolute inset-0 flex items-center justify-center hidden">
+                                        <svg class="w-32 h-32" viewBox="0 0 100 100" fill="none">
+                                            <!-- Green stems -->
+                                            <path d="M43 55 C42 45 49 35 55 35" stroke="#606C38" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M60 57 C58 46 54 36 55 35" stroke="#606C38" stroke-width="2" stroke-linecap="round"/>
+                                            <!-- Green leaf -->
+                                            <path d="M55 35 C52 32 45 35 48 38 C51 40 54 37 55 35 Z" fill="#606C38" stroke="#283618" stroke-width="1"/>
+                                            <!-- Cherry 1 -->
+                                            <circle cx="41" cy="58" r="8" fill="#D62828" stroke="#283618" stroke-width="1.5"/>
+                                            <circle cx="38" cy="55" r="2" fill="#FFF" opacity="0.8"/>
+                                            <!-- Cherry 2 -->
+                                            <circle cx="61" cy="60" r="8" fill="#9E0010" stroke="#283618" stroke-width="1.5"/>
+                                            <circle cx="58" cy="57" r="2" fill="#FFF" opacity="0.8"/>
+                                        </svg>
+                                    </div>
+
+                                    <!-- C. Mystic Evil Eye Motif -->
+                                    <div id="motif-layer-eye" class="absolute inset-0 flex items-center justify-center hidden">
+                                        <svg class="w-32 h-32" viewBox="0 0 100 100" fill="none">
+                                            <!-- Outer eye almond outline -->
+                                            <path d="M25 50 C35 38 65 38 75 50 C65 62 35 62 25 50 Z" fill="#FFF" stroke="#283618" stroke-width="2"/>
+                                            <!-- Blue Iris -->
+                                            <circle cx="50" cy="50" r="10" fill="#00B4D8" stroke="#283618" stroke-width="1.5"/>
+                                            <!-- Pupil -->
+                                            <circle cx="50" cy="50" r="5" fill="#283618" />
+                                            <!-- Catchlight -->
+                                            <circle cx="48" cy="48" r="1.5" fill="#FFF" />
+                                            <!-- Golden rays radiating around eye -->
+                                            <path d="M50 34 L50 30" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M50 66 L50 70" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M34 50 L30 50" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M66 50 L70 50" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M38 38 L35 35" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M62 62 L65 65" stroke="#DDA15E" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+
+                                    <!-- D. Custom Typography Motif -->
+                                    <div id="motif-layer-custom" class="absolute inset-0 flex items-center justify-center hidden">
+                                        <div class="text-center w-full px-4">
+                                            <!-- Display text customized with handwriting styling -->
+                                            <p id="live-text-rendering" class="font-serif italic text-2xl font-bold tracking-wide text-brandDark transform -rotate-12 bg-white/20 px-3 py-1.5 rounded border border-brandDark/10 inline-block">
+                                                Artesanal
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                            <!-- Signed Badge Overlay representing custom brand signature -->
+                            <div class="absolute bottom-4 right-4 bg-brandDark text-brandCream border border-brandCream text-[9px] uppercase tracking-widest font-black py-1 px-2.5 rounded-full flex items-center gap-1.5 shadow-md">
+                                <i class="fa-solid fa-signature text-brandOrange"></i> Signed by Artisan
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-brandAccent font-bold uppercase mt-3 tracking-widest text-center">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Interactive Customizer Live preview (Scale: 1:1 ratio)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= TAB: MARKET & STRATEGY ================= -->
+        <div id="content-market" class="tab-content hidden space-y-12">
+            
+            <!-- Market Definition Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Target Audience Description -->
+                <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="p-3 bg-brandLight rounded-lg border-2 border-brandDark text-brandDark">
+                                <i class="fa-solid fa-bullseye text-xl"></i>
+                            </span>
+                            <h2 class="font-serif text-3xl font-bold">Target Market Definition</h2>
+                        </div>
+                        <p class="leading-relaxed text-brandDark mb-6">
+                            Our business targets modern buyers who prioritize artistic value over mass industrial output. Many customers actively choose personalized, custom-designed items that communicate deeper symbolic meaning.
+                        </p>
+                        
+                        <!-- Demographics Segmentation -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 bg-brandCream p-4 rounded-xl border border-brandDark/25">
+                                <div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold">
+                                    Y
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-sm">Teenagers & Young Adults</h4>
+                                    <p class="text-xs text-brandDark/80">Active on social media platforms, highly appreciative of "aesthetic", pastel, and handmade accessories or keychains.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-brandCream p-4 rounded-xl border border-brandDark/25">
+                                <div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold">
+                                    A
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-sm">Adults Seeking Custom Gifts</h4>
+                                    <p class="text-xs text-brandDark/80">Looking for unique, personalized items, such as painted coffee cups resembling their pets or custom monogrammed embroidery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 border-t border-brandDark/20 pt-6">
+                        <span class="text-xs uppercase tracking-widest font-black text-brandAccent block mb-1">Differentiating Advantage</span>
+                        <p class="text-sm italic">
+                            "While other micro-sellers provide isolated embroidery or crochet items, our unique strategy is the synchronized cross-medium customization options (yarn, paint, thread) offered in a single artistic storefront."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Distribution and Channels -->
+                <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="p-3 bg-brandLight rounded-lg border-2 border-brandDark text-brandDark">
+                                <i class="fa-solid fa-truck-ramp-box text-xl"></i>
+                            </span>
+                            <h2 class="font-serif text-3xl font-bold">Location & Logistics</h2>
+                        </div>
+                        <p class="leading-relaxed text-brandDark mb-6">
+                            To minimize overhead and operate inside a safe budget, our business model will begin as an online-first operation, eventually scaling to temporary physical placements.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="border-2 border-brandDark p-4 rounded-xl bg-brandLight">
+                                <h4 class="font-bold text-sm mb-2"><i class="fa-solid fa-cloud mr-2 text-brandAccent"></i>Online Operations</h4>
+                                <p class="text-xs text-brandDark/80 leading-relaxed">
+                                    Visual showcase on web platforms. Orders configured digitally and built to order within a week. Delivered to client homes.
+                                </p>
+                            </div>
+                            <div class="border-2 border-brandDark p-4 rounded-xl bg-brandLight">
+                                <h4 class="font-bold text-sm mb-2"><i class="fa-solid fa-tent mr-2 text-brandAccent"></i>Physical Popups</h4>
+                                <p class="text-xs text-brandDark/80 leading-relaxed">
+                                    Occasional direct selling inside local craft fairs held in shopping centers and city plazas. Perfect for brand awareness and direct client interaction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandCream p-4 rounded-xl border border-brandDark/25 mt-6">
+                        <span class="text-xs font-bold text-brandAccent block mb-1"><i class="fa-solid fa-truck-fast mr-1.5"></i>Logistics and Delivery Charges</span>
+                        <p class="text-xs leading-relaxed">
+                            Crafts are dispatched directly from our workshop. Shipping fees are variable and calculated strictly based on client distance from our central node.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing and Promotional Strategy -->
+            <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
+                <div class="border-b-2 border-brandDark pb-6 mb-8 text-center md:text-left">
+                    <span class="text-xs uppercase tracking-widest font-bold text-brandAccent block mb-1">Outreach Roadmap</span>
+                    <h2 class="font-serif text-3xl font-bold">Marketing & Visual Strategy</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-camera-retro"></i></div>
+                        <h4 class="font-bold text-base mb-2">1. Visual Content Creation</h4>
+                        <p class="text-xs text-brandDark/80 leading-relaxed">
+                            Publishing detailed behind-the-scenes videos showing the design process, stitch-by-stitch progress, and paint blending. Real artisan transparency drives high organic reach.
+                        </p>
+                    </div>
+
+                    <div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-clapperboard"></i></div>
+                        <h4 class="font-bold text-base mb-2">2. "Gap-Style" Commercials</h4>
+                        <p class="text-xs text-brandDark/80 leading-relaxed">
+                            Creative, high-concept visual photoshoots featuring actual models posing with styled embroidered canvas bags, shirts, and keychains inside warm, natural lighting set designs.
+                        </p>
+                    </div>
+
+                    <div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-star-half-stroke"></i></div>
+                        <h4 class="font-bold text-base mb-2">3. Loyalty & Feedback Loops</h4>
+                        <p class="text-xs text-brandDark/80 leading-relaxed">
+                            Gathering reviews, suggestions, and customer reactions directly from social media platforms to design subsequent seasonal product batches in real-time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= TAB: FINANCIAL PLAN ================= -->
+        <div id="content-financial" class="tab-content hidden space-y-12">
+            
+            <!-- Projections Cards for Year 1, 2, 3 -->
+            <div>
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase font-black text-brandAccent tracking-widest block mb-1">Financial Forecast</span>
+                    <h2 class="font-serif text-4xl font-extrabold">Estimated Growth Forecast</h2>
+                    <p class="text-brandDark/70 max-w-2xl mx-auto mt-2">
+                        Projected financial returns based on production metrics and expected local demand growth over our first three years of business operations.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Year 1 -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase I</span>
+                                <span class="text-xs font-bold text-brandAccent">Volume: 28 units /mo</span>
+                            </div>
+                            <h3 class="font-serif text-3xl font-black mb-1">Year 1</h3>
+                            <span class="text-xs text-brandDark/65 block mb-4">Establishing Brand Foundations</span>
+                            
+                            <div class="space-y-2 border-t border-brandDark/10 pt-4">
+                                <div class="flex justify-between text-xs">
+                                    <span>Crochet Sales:</span>
+                                    <span class="font-bold">1,200 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Embroidery Sales:</span>
+                                    <span class="font-bold">1,500 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Porcelain Sales:</span>
+                                    <span class="font-bold">1,200 Bs.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
+                            <div class="flex justify-between text-sm font-bold text-brandDark mb-1">
+                                <span>Monthly revenue:</span>
+                                <span>3,900 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-red-700 mb-2">
+                                <span>Monthly production cost:</span>
+                                <span>- 1,370 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
+                                <span>Annual Net Profit:</span>
+                                <span>30,360 Bs.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Year 2 -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase II</span>
+                                <span class="text-xs font-bold text-brandAccent">Volume: 42 units /mo</span>
+                            </div>
+                            <h3 class="font-serif text-3xl font-black mb-1">Year 2</h3>
+                            <span class="text-xs text-brandDark/65 block mb-4">Expanding Social Penetration</span>
+                            
+                            <div class="space-y-2 border-t border-brandDark/10 pt-4">
+                                <div class="flex justify-between text-xs">
+                                    <span>Crochet Sales:</span>
+                                    <span class="font-bold">1,890 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Embroidery Sales:</span>
+                                    <span class="font-bold">2,170 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Porcelain Sales:</span>
+                                    <span class="font-bold">2,100 Bs.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
+                            <div class="flex justify-between text-sm font-bold text-brandDark mb-1">
+                                <span>Monthly revenue:</span>
+                                <span>6,160 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-red-700 mb-2">
+                                <span>Monthly production cost:</span>
+                                <span>- 2,080 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
+                                <span>Annual Net Profit:</span>
+                                <span>48,960 Bs.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Year 3 -->
+                    <div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan-lg flex flex-col justify-between relative transform -translate-y-1">
+                        <div class="absolute -top-3.5 right-6 bg-brandOrange text-brandDark border-2 border-brandDark text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest shadow-md">
+                            Peak Projection
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase III</span>
+                                <span class="text-xs font-bold text-brandAccent">Volume: 55 units /mo</span>
+                            </div>
+                            <h3 class="font-serif text-3xl font-black mb-1">Year 3</h3>
+                            <span class="text-xs text-brandDark/65 block mb-4">Established Scale Operations</span>
+                            
+                            <div class="space-y-2 border-t border-brandDark/10 pt-4">
+                                <div class="flex justify-between text-xs">
+                                    <span>Crochet Sales:</span>
+                                    <span class="font-bold">2,750 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Embroidery Sales:</span>
+                                    <span class="font-bold">2,880 Bs.</span>
+                                </div>
+                                <div class="flex justify-between text-xs">
+                                    <span>Porcelain Sales:</span>
+                                    <span class="font-bold">2,640 Bs.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
+                            <div class="flex justify-between text-sm font-bold text-brandDark mb-1">
+                                <span>Monthly revenue:</span>
+                                <span>8,270 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-xs text-red-700 mb-2">
+                                <span>Monthly production cost:</span>
+                                <span>- 2,675 Bs.</span>
+                            </div>
+                            <div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
+                                <span>Annual Net Profit:</span>
+                                <span>67,140 Bs.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capital Source and Costs Breakdowns -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Funding source -->
+                <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-4"><i class="fa-solid fa-piggy-bank mr-2 text-brandAccent"></i>Source of Capital</h3>
+                        <p class="text-sm leading-relaxed text-brandDark mb-6">
+                            Initial setup, initial materials purchases, and visual branding tooling requires funding. Our source of capital is strategically split to maintain manageable financial liabilities.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="border border-brandDark/20 p-4 rounded-xl bg-brandCream">
+                                <strong class="text-sm block font-bold mb-1"><i class="fa-solid fa-building-columns mr-1.5"></i>Primary Option: Microcrédito (Banco Ganadero)</strong>
+                                <span class="text-xs text-brandDark/80">Specifically structured financial support tailored to micro-entrepreneurs in Bolivia. Keeps monthly repayment metrics predictable.</span>
+                            </div>
+                            <div class="border border-brandDark/20 p-4 rounded-xl bg-brandCream">
+                                <strong class="text-sm block font-bold mb-1"><i class="fa-solid fa-children mr-1.5"></i>Support Network: Contribution from Legal Tutors</strong>
+                                <span class="text-xs text-brandDark/80">To protect credit integrity during initialization phases, additional material contributions will be offered by legal guardians.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-brandDark/20 pt-6 mt-6">
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-brandAccent">Initial Goal Status</p>
+                        <p class="text-xs text-brandDark/60">Fully compliant with initial material costs estimates for launching the three-pronged product categories.</p>
+                    </div>
+                </div>
+
+                <!-- Fixed and Variable expenses -->
+                <div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
+                    <h3 class="font-serif text-2xl font-bold mb-6"><i class="fa-solid fa-list-check mr-2 text-brandAccent"></i>Fixed & Variable Cost Metrics</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <span class="text-xs font-black uppercase text-brandAccent bg-brandCream border border-brandDark/20 py-1 px-2.5 rounded-full inline-block mb-3">Fixed Monthly Costs</span>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandAccent"><i class="fa-solid fa-wifi"></i></span>
+                                    <span>High-speed Internet</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandAccent"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                                    <span>Mobile Connection Plan</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandAccent"><i class="fa-solid fa-bullhorn"></i></span>
+                                    <span>Social Media Promotions</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="text-xs font-black uppercase text-brandAccent bg-brandCream border border-brandDark/20 py-1 px-2.5 rounded-full inline-block mb-3">Variable Unit Costs</span>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandOrange"><i class="fa-solid fa-circle-nodes"></i></span>
+                                    <span>Crochet Yarn & Needles</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandOrange"><i class="fa-solid fa-shirt"></i></span>
+                                    <span>Fabric, Tote Bags & Shirts</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandOrange"><i class="fa-solid fa-brush"></i></span>
+                                    <span>Porcelain bases & Paints</span>
+                                </li>
+                                <li class="flex items-center gap-2.5 text-sm">
+                                    <span class="text-brandOrange"><i class="fa-solid fa-box-open"></i></span>
+                                    <span>Packaging & Delivery Costs</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-brandCream p-4 rounded-xl border border-brandDark/25 text-xs text-brandDark/85">
+                        <i class="fa-solid fa-triangle-exclamation mr-1.5 text-brandOrange"></i>
+                        <strong>Inflation Clause:</strong> Variable rates must be indexed with minor adjustments annually to counteract rising material rates.
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE INTERACTIVE FEASIBILITY SIMULATOR -->
+            <div class="bg-brandDark text-brandCream p-8 rounded-3xl border-2 border-brandDark shadow-artisan-lg">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <span class="text-xs uppercase tracking-widest font-black text-brandOrange bg-brandAccent/50 px-3 py-1.5 rounded-full border border-brandAccent inline-block mb-3">Interactive Planning Tool</span>
+                    <h3 class="font-serif text-3xl font-bold text-brandWarmWhite">Live Profit & Feasibility Simulator</h3>
+                    <p class="text-xs text-brandCream/80 mt-2">
+                        Adjust predicted monthly sales values below to calculate custom monthly and annual financial yields based on exact unit margins.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Unit inputs (Left) -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <!-- Crochet input -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Crochet units /month</label>
+                                <span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 65 Bs</span>
+                            </div>
+                            <input type="range" id="sim-input-crochet" min="0" max="60" value="12" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
+                            <div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
+                                <span>0 units</span>
+                                <span class="font-bold text-brandOrange"><span id="val-crochet">12</span> sold /mo</span>
+                                <span>60 units</span>
+                            </div>
+                        </div>
+
+                        <!-- Embroidery input -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Embroidered units /month</label>
+                                <span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 100 Bs</span>
+                            </div>
+                            <input type="range" id="sim-input-embroidery" min="0" max="60" value="10" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
+                            <div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
+                                <span>0 units</span>
+                                <span class="font-bold text-brandOrange"><span id="val-embroidery">10</span> sold /mo</span>
+                                <span>60 units</span>
+                            </div>
+                        </div>
+
+                        <!-- Porcelain input -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Painted Porcelain units /month</label>
+                                <span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 125 Bs (or 150 Bs)</span>
+                            </div>
+                            <input type="range" id="sim-input-porcelain" min="0" max="60" value="6" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
+                            <div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
+                                <span>0 units</span>
+                                <span class="font-bold text-brandOrange"><span id="val-porcelain">6</span> sold /mo</span>
+                                <span>60 units</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Outputs (Right) -->
+                    <div class="lg:col-span-6 bg-brandAccent/20 p-6 rounded-2xl border border-brandAccent/40 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-brandDark/40 p-4 rounded-xl border border-brandAccent/25">
+                                <span class="text-[10px] uppercase font-bold text-brandCream/70 block">Monthly Revenue</span>
+                                <p class="font-serif text-xl font-bold text-brandWarmWhite mt-1"><span id="out-rev-monthly">3,900</span> Bs.</p>
+                            </div>
+                            <div class="bg-brandDark/40 p-4 rounded-xl border border-brandAccent/25">
+                                <span class="text-[10px] uppercase font-bold text-brandCream/70 block">Production Cost</span>
+                                <p class="font-serif text-xl font-bold text-red-300 mt-1"><span id="out-cost-monthly">1,370</span> Bs.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brandAccent/45 p-5 rounded-xl border-2 border-brandOrange text-center">
+                            <span class="text-xs uppercase tracking-wider font-bold text-brandOrange block mb-1">Total Net Profit Yield</span>
+                            <div class="font-serif text-3xl font-black text-brandWarmWhite mb-1">
+                                <span id="out-profit-monthly">2,530</span> Bs. <span class="text-xs text-brandCream/80 font-sans font-normal">/mo</span>
+                            </div>
+                            <div class="font-sans text-sm font-semibold text-brandCream border-t border-brandCream/25 pt-2 mt-2">
+                                Annual: <span id="out-profit-annual" class="font-serif text-lg text-brandOrange font-bold">30,360</span> <span class="text-xs">Bs.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t-2 border-brandDark bg-brandCream py-8 px-4 mt-12 text-center text-xs">
+        <div class="max-w-7xl mx-auto space-y-3">
+            <span class="font-serif text-lg font-bold block">ARTESANAL CO.</span>
+            <p class="text-brandDark/70 max-w-md mx-auto">
+                Designed and formulated for the Business Studies curriculum. Handcrafted products are fully signed and packaged in safe, aesthetic bundles.
+            </p>
+            <p class="font-bold text-brandAccent">
+                Taiz Nahiara Shraer & Alexia Quiroga • Year 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL POPUP FOR ORDER SIMULATION -->
+    <div id="success-modal" class="fixed inset-0 bg-brandDark/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-brandWarmWhite max-w-md w-full rounded-2xl border-2 border-brandDark p-6 text-center shadow-artisan-lg relative animate-bounce-short">
+            <div class="w-16 h-16 bg-brandAccent text-brandCream rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-brandDark text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-2">Design Shared!</h3>
+            <p class="text-sm text-brandDark/85 leading-relaxed mb-6">
+                Your custom request details have been configured. To order, this simulation sends your layout data straight to our direct WhatsApp order inbox!
+            </p>
+            <div id="modal-summary-text" class="bg-brandCream p-3 rounded-lg border border-brandDark/25 text-xs text-left mb-6 space-y-1">
+                <!-- Summary inserted dynamically -->
+            </div>
+            <button onclick="closeModal()" class="w-full bg-brandDark text-brandCream font-bold py-2.5 rounded-lg border-2 border-brandDark shadow-artisan-sm hover:translate-y-0.5 active:translate-y-1 transition-all text-xs uppercase tracking-widest">
+                Continue Exploring
+            </button>
+        </div>
+    </div>
+
+    <!-- JS LOGIC FOR TABS, CUSTOMIZER, AND CALCULATORS -->
+    <script>
+        // Tab switching function
+        function switchTab(tabId) {
+            // Hide all tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+            contents.forEach(el => el.classList.remove('block'));
+
+            // Show selected tab
+            const target = document.getElementById('content-' + tabId);
+            if (target) {
+                target.classList.remove('hidden');
+                target.classList.add('block');
+            }
+
+            // Update tab button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brandDark', 'text-brandCream', 'shadow-none');
+                btn.classList.add('bg-brandCream', 'hover:bg-brandLight');
+            });
+
+            const activeBtn = document.getElementById('tab-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-brandDark', 'text-brandCream', 'shadow-none');
+                activeBtn.classList.remove('bg-brandCream', 'hover:bg-brandLight');
+            }
+        }
+
+        // Customizer state
+        let currentBase = 'dish';
+        let currentMotif = 'flower';
+
+        const prices = {
+            base: {
+                dish: 200,
+                tote: 150,
+                shirt: 150
+            },
+            motif: {
+                flower: 0,
+                fruit: 10,
+                eye: 15,
+                custom: 25
+            }
+        };
+
+        function selectPreviewBase(baseId) {
+            currentBase = baseId;
+            
+            // Highlight button
+            document.querySelectorAll('.preview-base-btn').forEach(btn => {
+                btn.classList.remove('bg-brandDark', 'text-brandCream');
+                btn.classList.add('bg-brandCream');
+            });
+            document.getElementById('btn-base-' + baseId).classList.add('bg-brandDark', 'text-brandCream');
+            document.getElementById('btn-base-' + baseId).classList.remove('bg-brandCream');
+
+            // Hide all bases in viewport
+            document.getElementById('mockup-base-dish').classList.add('hidden');
+            document.getElementById('mockup-base-tote').classList.add('hidden');
+            document.getElementById('mockup-base-shirt').classList.add('hidden');
+
+            // Show current base
+            document.getElementById('mockup-base-' + baseId).classList.remove('hidden');
+
+            updatePrice();
+        }
+
+        function selectPreviewMotif(motifId) {
+            currentMotif = motifId;
+
+            // Highlight button
+            document.querySelectorAll('.preview-motif-btn').forEach(btn => {
+                btn.classList.remove('bg-brandDark', 'text-brandCream');
+                btn.classList.add('bg-brandCream');
+            });
+            document.getElementById('btn-motif-' + motifId).classList.add('bg-brandDark', 'text-brandCream');
+            document.getElementById('btn-motif-' + motifId).classList.remove('bg-brandCream');
+
+            // Hide all motifs in viewport
+            document.getElementById('motif-layer-flower').classList.add('hidden');
+            document.getElementById('motif-layer-fruit').classList.add('hidden');
+            document.getElementById('motif-layer-eye').classList.add('hidden');
+            document.getElementById('motif-layer-custom').classList.add('hidden');
+
+            // Show current motif
+            document.getElementById('motif-layer-' + motifId).classList.remove('hidden');
+
+            // Show custom input field if custom selected
+            const textInput = document.getElementById('custom-text-input-container');
+            if (motifId === 'custom') {
+                textInput.classList.remove('hidden');
+                updateCustomTextPreview();
+            } else {
+                textInput.classList.add('hidden');
+            }
+
+            updatePrice();
+        }
+
+        function updateCustomTextPreview() {
+            const rawText = document.getElementById('custom-text-field').value || "Artesanal";
+            document.getElementById('live-text-rendering').innerText = rawText;
+        }
+
+        function updatePrice() {
+            const basePrice = prices.base[currentBase];
+            const motifPrice = prices.motif[currentMotif];
+            const totalPrice = basePrice + motifPrice;
+            document.getElementById('customizer-price-tag').innerText = totalPrice + " Bs";
+        }
+
+        // Simulation for microenterprise financial calculations
+        function calculateSimulation() {
+            const numCrochet = parseInt(document.getElementById('sim-input-crochet').value);
+            const numEmbroidery = parseInt(document.getElementById('sim-input-embroidery').value);
+            const numPorcelain = parseInt(document.getElementById('sim-input-porcelain').value);
+
+            // Update UI value tags
+            document.getElementById('val-crochet').innerText = numCrochet;
+            document.getElementById('val-embroidery').innerText = numEmbroidery;
+            document.getElementById('val-porcelain').innerText = numPorcelain;
+
+            // Constants from plan
+            // Crochet: Cost 35, Profit 65, Sale 100
+            // Embroidered: Cost 50, Profit 100, Sale 150
+            // Porcelain: Cost 75, Profit 125, Sale 200 (Adjusted based on text: porcelain sales cost: 200, material cost: 50, profit: 125 - we use 125 profit, implying 75 total adjusted cost)
+            const crochetCost = 35;
+            const crochetSale = 100;
+
+            const embroideryCost = 50;
+            const embroiderySale = 150;
+
+            const porcelainCost = 75; // 200 - 125 profit
+            const porcelainSale = 200;
+
+            const monthlyRevenue = (numCrochet * crochetSale) + (numEmbroidery * embroiderySale) + (numPorcelain * porcelainSale);
+            const monthlyCost = (numCrochet * crochetCost) + (numEmbroidery * embroideryCost) + (numPorcelain * porcelainCost);
+            const monthlyProfit = monthlyRevenue - monthlyCost;
+            const annualProfit = monthlyProfit * 12;
+
+            // Update outputs
+            document.getElementById('out-rev-monthly').innerText = monthlyRevenue.toLocaleString();
+            document.getElementById('out-cost-monthly').innerText = monthlyCost.toLocaleString();
+            document.getElementById('out-profit-monthly').innerText = monthlyProfit.toLocaleString();
+            document.getElementById('out-profit-annual').innerText = annualProfit.toLocaleString();
+        }
+
+        // Custom modal simulation triggers
+        function simulateOrderSubmit() {
+            const baseLabel = currentBase.charAt(0).toUpperCase() + currentBase.slice(1);
+            const motifLabel = currentMotif.charAt(0).toUpperCase() + currentMotif.slice(1);
+            const finalPrice = document.getElementById('customizer-price-tag').innerText;
+            const customText = currentMotif === 'custom' ? `"${document.getElementById('custom-text-field').value}"` : 'N/A';
+
+            const summaryDiv = document.getElementById('modal-summary-text');
+            summaryDiv.innerHTML = `
+                <p><strong>Product Type:</strong> Handmade ${baseLabel}</p>
+                <p><strong>Design Theme:</strong> ${motifLabel}</p>
+                ${currentMotif === 'custom' ? `<p><strong>Personalized Embroidery:</strong> ${customText}</p>` : ''}
+                <p class="border-t border-brandDark/20 pt-2 mt-2"><strong>Total Custom Price Estimate:</strong> ${finalPrice}</p>
+            `;
+
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Run default initialization
+        window.onload = function() {
+            updatePrice();
+            calculateSimulation();
+        }
+    </script>
+</body>
+</html>
+
+```

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ENTRELAZADO  /title>
+<title>ENTRELAZADO - Business Plan</title>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- FontAwesome for beautiful handmade / craft style icons -->
@@ -73,11 +73,11 @@ background: #606C38;
 <!-- Branding -->
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold text-lg shadow-artisan-sm">
-A
+E
 </div>
 <div>
 <span class="font-serif text-2xl font-black tracking-wider uppercase block">Entrelazado</span>
-<span class="text-xs font-semibold uppercase tracking-widest text-brandAccent block"></span>
+<span class="text-xs font-semibold uppercase tracking-widest text-brandAccent block">Shraer & Quiroga • 6SB</span>
 </div>
 </div>
 <!-- Main Tabs -->
@@ -88,12 +88,6 @@ A
 <button onclick="switchTab('products')" id="tab-products" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
 <i class="fa-solid fa-palette mr-1.5"></i>Products & Preview
 </button>
-<button onclick="switchTab('market')" id="tab-market" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
-<i class="fa-solid fa-chart-line mr-1.5"></i>Market & Strategy
-</button>
-<button onclick="switchTab('financial')" id="tab-financial" class="tab-btn px-4 py-2 rounded-lg font-bold text-sm border-2 border-brandDark bg-brandCream hover:bg-brandLight transition-all duration-150">
-<i class="fa-solid fa-calculator mr-1.5"></i>Financial Plan
-</button>
 </nav>
 </div>
 </header>
@@ -102,18 +96,26 @@ A
 <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-brandLight opacity-30 border-4 border-dashed border-brandDark"></div>
 <div class="max-w-4xl mx-auto text-center relative z-10">
 <span class="bg-brandOrange text-brandDark border-2 border-brandDark px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-artisan-sm inline-block mb-6">
-Made by: Nadeshna Alexia & Taiz Shraer
+Business Studies Project — 2026
 </span>
 <h1 class="font-serif text-5xl md:text-7xl font-black tracking-tight mb-4">
 ENTRELAZADO
 </h1>
 <p class="font-serif italic text-lg md:text-2xl text-brandAccent max-w-2xl mx-auto mb-8">
-
+"An authentic, deeply personalized, and curated collection of handmade treasures."
 </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto bg-brandWarmWhite p-6 rounded-2xl border-2 border-brandDark shadow-artisan">
 <div class="text-left space-y-2 md:border-r border-brandDark/20 md:pr-4">
-<span class="text-xs uppercase font-bold text-brandAccent block"</span>
-<p class="font-bold text-lg">"An authentic, deeply personalized, and curated collection of handmade treasures."</p>
+<span class="text-xs uppercase font-bold text-brandAccent block">Created by</span>
+<p class="font-bold text-lg">Taiz Nahiara Shraer</p>
+<p class="font-bold text-lg">Alexia Quiroga</p>
+</div>
+<div class="text-left space-y-2 md:pl-4 pt-4 md:pt-0">
+<span class="text-xs uppercase font-bold text-brandAccent block">Course Details</span>
+<p class="font-semibold text-brandDark">Class: <strong class="font-bold">6SB</strong></p>
+<p class="font-semibold text-brandDark">Date: <strong class="font-bold">16/03/2026</strong></p>
+</div>
+</div>
 </div>
 </section>
 <!-- MAIN CONTENT container -->
@@ -131,10 +133,10 @@ ENTRELAZADO
 <h2 class="font-serif text-3xl font-bold">Description of the Business</h2>
 </div>
 <p class="leading-relaxed text-brandDark text-base md:text-lg space-y-4">
-The core philosophy of our business is to be truly <strong>Entrelazado</strong>, offering highly personalized, custom pieces tailored perfectly to each client's unique tastes. Rather than settling for a single category, our project blends <strong>three different artisan crafts</strong>: crochet yarn pieces, custom-painted fine porcelain, and hand-embroidered accessories.
+The core philosophy of our business is to be truly <strong>Artesanal</strong>, offering highly personalized, custom pieces tailored perfectly to each client's unique tastes. Rather than settling for a single category, our project blends <strong>three different artisan crafts</strong>: crochet yarn pieces, custom-painted fine porcelain, and hand-embroidered accessories.
 </p>
 <p class="leading-relaxed text-brandDark text-base md:text-lg mt-4">
-Our objective is to launch in a lean format, spreading our brand awareness iteratively through highly aesthetic social media networks and customer word-of-mouth.
+Our objective is to launch in a lean format, spreading our brand awareness iteratively through highly aesthetic social media networks and customer word-of-mouth under our custom name, <strong>Entrelazado</strong>.
 </p>
 </div>
 <div class="mt-8 bg-brandLight/50 p-4 rounded-xl border border-brandDark/30">
@@ -430,8 +432,8 @@ Select a base product, customize the hand-painted pattern or embroidery, and pre
 <!-- Step 3: Text Customization (Shown if custom selected) -->
 <div id="custom-text-input-container" class="hidden">
 <label class="block text-xs uppercase font-bold text-brandAccent mb-1">3. Enter Custom Text (Embroidery/Paint)</label>
-<input type="text" id="custom-text-field" oninput="updateCustomTextPreview()" value="Artesanal" maxlength="12" class="w-full border-2 border-brandDark px-4 py-2 rounded-xl bg-brandCream font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent text-sm">
-<span class="text-[10px] text-brandAccent block mt-1">This will be meticulously sewn by hand onto your item.</span>
+<input type="text" id="custom-text-field" oninput="updateCustomTextPreview()" value="Entrelazado" maxlength="12" class="w-full border-2 border-brandDark px-4 py-2 rounded-xl bg-brandCream font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent text-sm">
+<span class="text-[10px] text-brandAccent block mt-1">This will be meticulously sewn or painted by hand onto your item.</span>
 </div>
 <!-- Submit simulation -->
 <div class="bg-brandCream p-4 rounded-xl border border-brandDark/30">
@@ -538,7 +540,8 @@ Select a base product, customize the hand-painted pattern or embroidery, and pre
 <div id="motif-layer-custom" class="absolute inset-0 flex items-center justify-center hidden">
 <div class="text-center w-full px-4">
 <!-- Display text customized with handwriting styling -->
-<p id="live-text-rendering" class="font-serif italic text-2xl font-bold tracking-wide text-brandDark transform -rotate-12 bg-white/20 px-3 py-1.5 rounded border border-brandDark/10 inline-block">Entrelazado
+<p id="live-text-rendering" class="font-serif italic text-2xl font-bold tracking-wide text-brandDark transform -rotate-12 bg-white/20 px-3 py-1.5 rounded border border-brandDark/10 inline-block">
+Entrelazado
 </p>
 </div>
 </div>
@@ -552,402 +555,6 @@ Select a base product, customize the hand-painted pattern or embroidery, and pre
 <p class="text-[11px] text-brandAccent font-bold uppercase mt-3 tracking-widest text-center">
 <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Interactive Customizer Live preview (Scale: 1:1 ratio)
 </p>
-</div>
-</div>
-</div>
-</div>
-<!-- ================= TAB: MARKET & STRATEGY ================= -->
-<div id="content-market" class="tab-content hidden space-y-12">
-<!-- Market Definition Cards -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<!-- Target Audience Description -->
-<div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-3 mb-6">
-<span class="p-3 bg-brandLight rounded-lg border-2 border-brandDark text-brandDark">
-<i class="fa-solid fa-bullseye text-xl"></i>
-</span>
-<h2 class="font-serif text-3xl font-bold">Target Market Definition</h2>
-</div>
-<p class="leading-relaxed text-brandDark mb-6">
-Our business targets modern buyers who prioritize artistic value over mass industrial output. Many customers actively choose personalized, custom-designed items that communicate deeper symbolic meaning.
-</p>
-<!-- Demographics Segmentation -->
-<div class="space-y-4">
-<div class="flex items-center gap-4 bg-brandCream p-4 rounded-xl border border-brandDark/25">
-<div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold">
-Y
-</div>
-<div class="flex-grow">
-<h4 class="font-bold text-sm">Teenagers & Young Adults</h4>
-<p class="text-xs text-brandDark/80">Active on social media platforms, highly appreciative of "aesthetic", pastel, and handmade accessories or keychains.</p>
-</div>
-</div>
-<div class="flex items-center gap-4 bg-brandCream p-4 rounded-xl border border-brandDark/25">
-<div class="w-10 h-10 rounded-full bg-brandDark text-brandCream flex items-center justify-center font-bold">
-A
-</div>
-<div class="flex-grow">
-<h4 class="font-bold text-sm">Adults Seeking Custom Gifts</h4>
-<p class="text-xs text-brandDark/80">Looking for unique, personalized items, such as painted coffee cups resembling their pets or custom monogrammed embroidery.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-8 border-t border-brandDark/20 pt-6">
-<span class="text-xs uppercase tracking-widest font-black text-brandAccent block mb-1">Differentiating Advantage</span>
-<p class="text-sm italic">
-"While other micro-sellers provide isolated embroidery or crochet items, our unique strategy is the synchronized cross-medium customization options (yarn, paint, thread) offered in a single artistic storefront."
-</p>
-</div>
-</div>
-<!-- Distribution and Channels -->
-<div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-3 mb-6">
-<span class="p-3 bg-brandLight rounded-lg border-2 border-brandDark text-brandDark">
-<i class="fa-solid fa-truck-ramp-box text-xl"></i>
-</span>
-<h2 class="font-serif text-3xl font-bold">Location & Logistics</h2>
-</div>
-<p class="leading-relaxed text-brandDark mb-6">
-To minimize overhead and operate inside a safe budget, our business model will begin as an online-first operation, eventually scaling to temporary physical placements.
-</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="border-2 border-brandDark p-4 rounded-xl bg-brandLight">
-<h4 class="font-bold text-sm mb-2"><i class="fa-solid fa-cloud mr-2 text-brandAccent"></i>Online Operations</h4>
-<p class="text-xs text-brandDark/80 leading-relaxed">
-Visual showcase on web platforms. Orders configured digitally and built to order within a week. Delivered to client homes.
-</p>
-</div>
-<div class="border-2 border-brandDark p-4 rounded-xl bg-brandLight">
-<h4 class="font-bold text-sm mb-2"><i class="fa-solid fa-tent mr-2 text-brandAccent"></i>Physical Popups</h4>
-<p class="text-xs text-brandDark/80 leading-relaxed">
-Occasional direct selling inside local craft fairs held in shopping centers and city plazas. Perfect for brand awareness and direct client interaction.
-</p>
-</div>
-</div>
-</div>
-<div class="bg-brandCream p-4 rounded-xl border border-brandDark/25 mt-6">
-<span class="text-xs font-bold text-brandAccent block mb-1"><i class="fa-solid fa-truck-fast mr-1.5"></i>Logistics and Delivery Charges</span>
-<p class="text-xs leading-relaxed">
-Crafts are dispatched directly from our workshop. Shipping fees are variable and calculated strictly based on client distance from our central node.
-</p>
-</div>
-</div>
-</div>
-<!-- Marketing and Promotional Strategy -->
-<div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
-<div class="border-b-2 border-brandDark pb-6 mb-8 text-center md:text-left">
-<span class="text-xs uppercase tracking-widest font-bold text-brandAccent block mb-1">Outreach Roadmap</span>
-<h2 class="font-serif text-3xl font-bold">Marketing & Visual Strategy</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-camera-retro"></i></div>
-<h4 class="font-bold text-base mb-2">1. Visual Content Creation</h4>
-<p class="text-xs text-brandDark/80 leading-relaxed">
-Publishing detailed behind-the-scenes videos showing the design process, stitch-by-stitch progress, and paint blending. Real artisan transparency drives high organic reach.
-</p>
-</div>
-<div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-clapperboard"></i></div>
-<h4 class="font-bold text-base mb-2">2. "Gap-Style" Commercials</h4>
-<p class="text-xs text-brandDark/80 leading-relaxed">
-Creative, high-concept visual photoshoots featuring actual models posing with styled embroidered canvas bags, shirts, and keychains inside warm, natural lighting set designs.
-</p>
-</div>
-<div class="bg-brandLight p-6 rounded-xl border-2 border-brandDark relative overflow-hidden">
-<div class="absolute -right-4 -bottom-4 text-brandDark/5 text-7xl"><i class="fa-solid fa-star-half-stroke"></i></div>
-<h4 class="font-bold text-base mb-2">3. Loyalty & Feedback Loops</h4>
-<p class="text-xs text-brandDark/80 leading-relaxed">
-Gathering reviews, suggestions, and customer reactions directly from social media platforms to design subsequent seasonal product batches in real-time.
-</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ================= TAB: FINANCIAL PLAN ================= -->
-<div id="content-financial" class="tab-content hidden space-y-12">
-<!-- Projections Cards for Year 1, 2, 3 -->
-<div>
-<div class="text-center mb-10">
-<span class="text-xs uppercase font-black text-brandAccent tracking-widest block mb-1">Financial Forecast</span>
-<h2 class="font-serif text-4xl font-extrabold">Estimated Growth Forecast</h2>
-<p class="text-brandDark/70 max-w-2xl mx-auto mt-2">
-Projected financial returns based on production metrics and expected local demand growth over our first three years of business operations.
-</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Year 1 -->
-<div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start mb-4">
-<span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase I</span>
-<span class="text-xs font-bold text-brandAccent">Volume: 28 units /mo</span>
-</div>
-<h3 class="font-serif text-3xl font-black mb-1">Year 1</h3>
-<span class="text-xs text-brandDark/65 block mb-4">Establishing Brand Foundations</span>
-<div class="space-y-2 border-t border-brandDark/10 pt-4">
-<div class="flex justify-between text-xs">
-<span>Crochet Sales:</span>
-<span class="font-bold">1,200 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Embroidery Sales:</span>
-<span class="font-bold">1,500 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Porcelain Sales:</span>
-<span class="font-bold">1,200 Bs.</span>
-</div>
-</div>
-</div>
-<div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
-<div class="flex justify-between text-sm font-bold text-brandDark mb-1">
-<span>Monthly revenue:</span>
-<span>3,900 Bs.</span>
-</div>
-<div class="flex justify-between text-xs text-red-700 mb-2">
-<span>Monthly production cost:</span>
-<span>- 1,370 Bs.</span>
-</div>
-<div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
-<span>Annual Net Profit:</span>
-<span>30,360 Bs.</span>
-</div>
-</div>
-</div>
-<!-- Year 2 -->
-<div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start mb-4">
-<span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase II</span>
-<span class="text-xs font-bold text-brandAccent">Volume: 42 units /mo</span>
-</div>
-<h3 class="font-serif text-3xl font-black mb-1">Year 2</h3>
-<span class="text-xs text-brandDark/65 block mb-4">Expanding Social Penetration</span>
-<div class="space-y-2 border-t border-brandDark/10 pt-4">
-<div class="flex justify-between text-xs">
-<span>Crochet Sales:</span>
-<span class="font-bold">1,890 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Embroidery Sales:</span>
-<span class="font-bold">2,170 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Porcelain Sales:</span>
-<span class="font-bold">2,100 Bs.</span>
-</div>
-</div>
-</div>
-<div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
-<div class="flex justify-between text-sm font-bold text-brandDark mb-1">
-<span>Monthly revenue:</span>
-<span>6,160 Bs.</span>
-</div>
-<div class="flex justify-between text-xs text-red-700 mb-2">
-<span>Monthly production cost:</span>
-<span>- 2,080 Bs.</span>
-</div>
-<div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
-<span>Annual Net Profit:</span>
-<span>48,960 Bs.</span>
-</div>
-</div>
-</div>
-<!-- Year 3 -->
-<div class="bg-brandWarmWhite border-2 border-brandDark rounded-2xl p-6 shadow-artisan-lg flex flex-col justify-between relative transform -translate-y-1">
-<div class="absolute -top-3.5 right-6 bg-brandOrange text-brandDark border-2 border-brandDark text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest shadow-md">
-Peak Projection
-</div>
-<div>
-<div class="flex justify-between items-start mb-4">
-<span class="bg-brandAccent text-brandCream font-bold text-xs px-2.5 py-1 rounded-full">Phase III</span>
-<span class="text-xs font-bold text-brandAccent">Volume: 55 units /mo</span>
-</div>
-<h3 class="font-serif text-3xl font-black mb-1">Year 3</h3>
-<span class="text-xs text-brandDark/65 block mb-4">Established Scale Operations</span>
-<div class="space-y-2 border-t border-brandDark/10 pt-4">
-<div class="flex justify-between text-xs">
-<span>Crochet Sales:</span>
-<span class="font-bold">2,750 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Embroidery Sales:</span>
-<span class="font-bold">2,880 Bs.</span>
-</div>
-<div class="flex justify-between text-xs">
-<span>Porcelain Sales:</span>
-<span class="font-bold">2,640 Bs.</span>
-</div>
-</div>
-</div>
-<div class="mt-6 pt-4 border-t-2 border-dashed border-brandDark/20 bg-brandCream -mx-6 -mb-6 p-6 rounded-b-2xl">
-<div class="flex justify-between text-sm font-bold text-brandDark mb-1">
-<span>Monthly revenue:</span>
-<span>8,270 Bs.</span>
-</div>
-<div class="flex justify-between text-xs text-red-700 mb-2">
-<span>Monthly production cost:</span>
-<span>- 2,675 Bs.</span>
-</div>
-<div class="flex justify-between text-base font-black text-brandAccent border-t border-brandDark/10 pt-2">
-<span>Annual Net Profit:</span>
-<span>67,140 Bs.</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Capital Source and Costs Breakdowns -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<!-- Funding source -->
-<div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan flex flex-col justify-between">
-<div>
-<h3 class="font-serif text-2xl font-bold mb-4"><i class="fa-solid fa-piggy-bank mr-2 text-brandAccent"></i>Source of Capital</h3>
-<p class="text-sm leading-relaxed text-brandDark mb-6">
-Initial setup, initial materials purchases, and visual branding tooling requires funding. Our source of capital is strategically split to maintain manageable financial liabilities.
-</p>
-<div class="space-y-4">
-<div class="border border-brandDark/20 p-4 rounded-xl bg-brandCream">
-<strong class="text-sm block font-bold mb-1"><i class="fa-solid fa-building-columns mr-1.5"></i>Primary Option: Microcrédito (Banco Ganadero)</strong>
-<span class="text-xs text-brandDark/80">Specifically structured financial support tailored to micro-entrepreneurs in Bolivia. Keeps monthly repayment metrics predictable.</span>
-</div>
-<div class="border border-brandDark/20 p-4 rounded-xl bg-brandCream">
-<strong class="text-sm block font-bold mb-1"><i class="fa-solid fa-children mr-1.5"></i>Support Network: Contribution from Legal Tutors</strong>
-<span class="text-xs text-brandDark/80">To protect credit integrity during initialization phases, additional material contributions will be offered by legal guardians.</span>
-</div>
-</div>
-</div>
-<div class="border-t border-brandDark/20 pt-6 mt-6">
-<p class="text-[10px] uppercase font-bold tracking-wider text-brandAccent">Initial Goal Status</p>
-<p class="text-xs text-brandDark/60">Fully compliant with initial material costs estimates for launching the three-pronged product categories.</p>
-</div>
-</div>
-<!-- Fixed and Variable expenses -->
-<div class="bg-brandWarmWhite p-8 rounded-2xl border-2 border-brandDark shadow-artisan">
-<h3 class="font-serif text-2xl font-bold mb-6"><i class="fa-solid fa-list-check mr-2 text-brandAccent"></i>Fixed & Variable Cost Metrics</h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div>
-<span class="text-xs font-black uppercase text-brandAccent bg-brandCream border border-brandDark/20 py-1 px-2.5 rounded-full inline-block mb-3">Fixed Monthly Costs</span>
-<ul class="space-y-3">
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandAccent"><i class="fa-solid fa-wifi"></i></span>
-<span>High-speed Internet</span>
-</li>
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandAccent"><i class="fa-solid fa-mobile-screen-button"></i></span>
-<span>Mobile Connection Plan</span>
-</li>
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandAccent"><i class="fa-solid fa-bullhorn"></i></span>
-<span>Social Media Promotions</span>
-</li>
-</ul>
-</div>
-<div>
-<span class="text-xs font-black uppercase text-brandAccent bg-brandCream border border-brandDark/20 py-1 px-2.5 rounded-full inline-block mb-3">Variable Unit Costs</span>
-<ul class="space-y-3">
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandOrange"><i class="fa-solid fa-circle-nodes"></i></span>
-<span>Crochet Yarn & Needles</span>
-</li>
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandOrange"><i class="fa-solid fa-shirt"></i></span>
-<span>Fabric, Tote Bags & Shirts</span>
-</li>
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandOrange"><i class="fa-solid fa-brush"></i></span>
-<span>Porcelain bases & Paints</span>
-</li>
-<li class="flex items-center gap-2.5 text-sm">
-<span class="text-brandOrange"><i class="fa-solid fa-box-open"></i></span>
-<span>Packaging & Delivery Costs</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="mt-8 bg-brandCream p-4 rounded-xl border border-brandDark/25 text-xs text-brandDark/85">
-<i class="fa-solid fa-triangle-exclamation mr-1.5 text-brandOrange"></i>
-<strong>Inflation Clause:</strong> Variable rates must be indexed with minor adjustments annually to counteract rising material rates.
-</div>
-</div>
-</div>
-<!-- LIVE INTERACTIVE FEASIBILITY SIMULATOR -->
-<div class="bg-brandDark text-brandCream p-8 rounded-3xl border-2 border-brandDark shadow-artisan-lg">
-<div class="max-w-3xl mx-auto text-center mb-8">
-<span class="text-xs uppercase tracking-widest font-black text-brandOrange bg-brandAccent/50 px-3 py-1.5 rounded-full border border-brandAccent inline-block mb-3">Interactive Planning Tool</span>
-<h3 class="font-serif text-3xl font-bold text-brandWarmWhite">Live Profit & Feasibility Simulator</h3>
-<p class="text-xs text-brandCream/80 mt-2">
-Adjust predicted monthly sales values below to calculate custom monthly and annual financial yields based on exact unit margins.
-</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<!-- Unit inputs (Left) -->
-<div class="lg:col-span-6 space-y-6">
-<!-- Crochet input -->
-<div>
-<div class="flex justify-between items-center mb-2">
-<label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Crochet units /month</label>
-<span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 65 Bs</span>
-</div>
-<input type="range" id="sim-input-crochet" min="0" max="60" value="12" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
-<div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
-<span>0 units</span>
-<span class="font-bold text-brandOrange"><span id="val-crochet">12</span> sold /mo</span>
-<span>60 units</span>
-</div>
-</div>
-<!-- Embroidery input -->
-<div>
-<div class="flex justify-between items-center mb-2">
-<label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Embroidered units /month</label>
-<span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 100 Bs</span>
-</div>
-<input type="range" id="sim-input-embroidery" min="0" max="60" value="10" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
-<div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
-<span>0 units</span>
-<span class="font-bold text-brandOrange"><span id="val-embroidery">10</span> sold /mo</span>
-<span>60 units</span>
-</div>
-</div>
-<!-- Porcelain input -->
-<div>
-<div class="flex justify-between items-center mb-2">
-<label class="text-xs font-bold uppercase tracking-wider text-brandWarmWhite">Painted Porcelain units /month</label>
-<span class="bg-brandAccent text-brandCream text-[10px] font-bold px-2 py-0.5 rounded">Margin: 125 Bs (or 150 Bs)</span>
-</div>
-<input type="range" id="sim-input-porcelain" min="0" max="60" value="6" oninput="calculateSimulation()" class="w-full accent-brandOrange bg-brandAccent rounded-lg appearance-none h-2">
-<div class="flex justify-between text-[11px] text-brandCream/75 mt-1">
-<span>0 units</span>
-<span class="font-bold text-brandOrange"><span id="val-porcelain">6</span> sold /mo</span>
-<span>60 units</span>
-</div>
-</div>
-</div>
-<!-- Metrics Outputs (Right) -->
-<div class="lg:col-span-6 bg-brandAccent/20 p-6 rounded-2xl border border-brandAccent/40 space-y-4">
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-brandDark/40 p-4 rounded-xl border border-brandAccent/25">
-<span class="text-[10px] uppercase font-bold text-brandCream/70 block">Monthly Revenue</span>
-<p class="font-serif text-xl font-bold text-brandWarmWhite mt-1"><span id="out-rev-monthly">3,900</span> Bs.</p>
-</div>
-<div class="bg-brandDark/40 p-4 rounded-xl border border-brandAccent/25">
-<span class="text-[10px] uppercase font-bold text-brandCream/70 block">Production Cost</span>
-<p class="font-serif text-xl font-bold text-red-300 mt-1"><span id="out-cost-monthly">1,370</span> Bs.</p>
-</div>
-</div>
-<div class="bg-brandAccent/45 p-5 rounded-xl border-2 border-brandOrange text-center">
-<span class="text-xs uppercase tracking-wider font-bold text-brandOrange block mb-1">Total Net Profit Yield</span>
-<div class="font-serif text-3xl font-black text-brandWarmWhite mb-1">
-<span id="out-profit-monthly">2,530</span> Bs. <span class="text-xs text-brandCream/80 font-sans font-normal">/mo</span>
-</div>
-<div class="font-sans text-sm font-semibold text-brandCream border-t border-brandCream/25 pt-2 mt-2">
-Annual: <span id="out-profit-annual" class="font-serif text-lg text-brandOrange font-bold">30,360</span> <span class="text-xs">Bs.</span>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -983,7 +590,7 @@ Continue Exploring
 </button>
 </div>
 </div>
-<!-- JS LOGIC FOR TABS, CUSTOMIZER, AND CALCULATORS -->
+<!-- JS LOGIC FOR TABS AND CUSTOMIZER -->
 <script>
 // Tab switching function
 function switchTab(tabId) {
@@ -1078,35 +685,6 @@ const motifPrice = prices.motif[currentMotif];
 const totalPrice = basePrice + motifPrice;
 document.getElementById('customizer-price-tag').innerText = totalPrice + " Bs";
 }
-// Simulation for microenterprise financial calculations
-function calculateSimulation() {
-const numCrochet = parseInt(document.getElementById('sim-input-crochet').value);
-const numEmbroidery = parseInt(document.getElementById('sim-input-embroidery').value);
-const numPorcelain = parseInt(document.getElementById('sim-input-porcelain').value);
-// Update UI value tags
-document.getElementById('val-crochet').innerText = numCrochet;
-document.getElementById('val-embroidery').innerText = numEmbroidery;
-document.getElementById('val-porcelain').innerText = numPorcelain;
-// Constants from plan
-// Crochet: Cost 35, Profit 65, Sale 100
-// Embroidered: Cost 50, Profit 100, Sale 150
-// Porcelain: Cost 75, Profit 125, Sale 200 (Adjusted based on text: porcelain sales cost: 200, material cost: 50, profit: 125 - we use 125 profit, implying 75 total adjusted cost)
-const crochetCost = 35;
-const crochetSale = 100;
-const embroideryCost = 50;
-const embroiderySale = 150;
-const porcelainCost = 75; // 200 - 125 profit
-const porcelainSale = 200;
-const monthlyRevenue = (numCrochet * crochetSale) + (numEmbroidery * embroiderySale) + (numPorcelain * porcelainSale);
-const monthlyCost = (numCrochet * crochetCost) + (numEmbroidery * embroideryCost) + (numPorcelain * porcelainCost);
-const monthlyProfit = monthlyRevenue - monthlyCost;
-const annualProfit = monthlyProfit * 12;
-// Update outputs
-document.getElementById('out-rev-monthly').innerText = monthlyRevenue.toLocaleString();
-document.getElementById('out-cost-monthly').innerText = monthlyCost.toLocaleString();
-document.getElementById('out-profit-monthly').innerText = monthlyProfit.toLocaleString();
-document.getElementById('out-profit-annual').innerText = annualProfit.toLocaleString();
-}
 // Custom modal simulation triggers
 function simulateOrderSubmit() {
 const baseLabel = currentBase.charAt(0).toUpperCase() + currentBase.slice(1);
@@ -1123,7 +701,6 @@ document.getElementById('success-modal').classList.add('hidden');
 // Run default initialization
 window.onload = function() {
 updatePrice();
-calculateSimulation();
 }
 </script>
 </body>

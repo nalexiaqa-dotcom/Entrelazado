@@ -131,7 +131,7 @@ ENTRELAZADO
 <h2 class="font-serif text-3xl font-bold">Description of the Business</h2>
 </div>
 <p class="leading-relaxed text-brandDark text-base md:text-lg space-y-4">
-The core philosophy of our business is to be truly <strong>Artesanal</strong>, offering highly personalized, custom pieces tailored perfectly to each client's unique tastes. Rather than settling for a single category, our project blends <strong>three different artisan crafts</strong>: crochet yarn pieces, custom-painted fine porcelain, and hand-embroidered accessories.
+The core philosophy of our business is to be truly <strong>Entrelazado</strong>, offering highly personalized, custom pieces tailored perfectly to each client's unique tastes. Rather than settling for a single category, our project blends <strong>three different artisan crafts</strong>: crochet yarn pieces, custom-painted fine porcelain, and hand-embroidered accessories.
 </p>
 <p class="leading-relaxed text-brandDark text-base md:text-lg mt-4">
 Our objective is to launch in a lean format, spreading our brand awareness iteratively through highly aesthetic social media networks and customer word-of-mouth.
@@ -431,7 +431,7 @@ Select a base product, customize the hand-painted pattern or embroidery, and pre
 <div id="custom-text-input-container" class="hidden">
 <label class="block text-xs uppercase font-bold text-brandAccent mb-1">3. Enter Custom Text (Embroidery/Paint)</label>
 <input type="text" id="custom-text-field" oninput="updateCustomTextPreview()" value="Artesanal" maxlength="12" class="w-full border-2 border-brandDark px-4 py-2 rounded-xl bg-brandCream font-bold focus:outline-none focus:ring-2 focus:ring-brandAccent text-sm">
-<span class="text-[10px] text-brandAccent block mt-1">This will be meticulously sewn or painted by hand onto your item.</span>
+<span class="text-[10px] text-brandAccent block mt-1">This will be meticulously sewn by hand onto your item.</span>
 </div>
 <!-- Submit simulation -->
 <div class="bg-brandCream p-4 rounded-xl border border-brandDark/30">
@@ -538,8 +538,7 @@ Select a base product, customize the hand-painted pattern or embroidery, and pre
 <div id="motif-layer-custom" class="absolute inset-0 flex items-center justify-center hidden">
 <div class="text-center w-full px-4">
 <!-- Display text customized with handwriting styling -->
-<p id="live-text-rendering" class="font-serif italic text-2xl font-bold tracking-wide text-brandDark transform -rotate-12 bg-white/20 px-3 py-1.5 rounded border border-brandDark/10 inline-block">
-Artesanal
+<p id="live-text-rendering" class="font-serif italic text-2xl font-bold tracking-wide text-brandDark transform -rotate-12 bg-white/20 px-3 py-1.5 rounded border border-brandDark/10 inline-block">Entrelazado
 </p>
 </div>
 </div>
@@ -957,7 +956,7 @@ Annual: <span id="out-profit-annual" class="font-serif text-lg text-brandOrange 
 <!-- FOOTER -->
 <footer class="border-t-2 border-brandDark bg-brandCream py-8 px-4 mt-12 text-center text-xs">
 <div class="max-w-7xl mx-auto space-y-3">
-<span class="font-serif text-lg font-bold block">ARTESANAL CO.</span>
+<span class="font-serif text-lg font-bold block">ENTRELAZADO CO.</span>
 <p class="text-brandDark/70 max-w-md mx-auto">
 Designed and formulated for the Business Studies curriculum. Handcrafted products are fully signed and packaged in safe, aesthetic bundles.
 </p>
@@ -1070,7 +1069,7 @@ textInput.classList.add('hidden');
 updatePrice();
 }
 function updateCustomTextPreview() {
-const rawText = document.getElementById('custom-text-field').value || "Artesanal";
+const rawText = document.getElementById('custom-text-field').value || "Entrelazado";
 document.getElementById('live-text-rendering').innerText = rawText;
 }
 function updatePrice() {
